@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  html,body{margin:0;width:1080px;height:1920px;overflow:hidden}
+  body{background:#101418;font-family:Georgia,'Times New Roman',serif;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 90px;box-sizing:border-box}
+  .seal{border:3px solid #c9a227;color:#c9a227;padding:14px 34px;font-size:30px;letter-spacing:.5em;text-transform:uppercase;border-radius:4px;margin-bottom:70px}
+  .main{color:#f4efe6;font-size:88px;line-height:1.25;font-weight:600}
+  .gold{color:#e3c15c}
+  .sub{color:#9aa3ad;font-size:52px;line-height:1.4;margin-top:60px}
+  .big-gold{color:#e3c15c;font-size:150px;font-weight:700;margin:20px 0}
+  .cta{background:#c9a227;color:#141414;font-size:72px;font-weight:700;padding:40px 70px;border-radius:16px;margin-top:60px}
+  .card{display:none;flex-direction:column;align-items:center;justify-content:center;width:100%}
+</style>
+</head>
+<body>
+<div class="card" id="c1">
+  <div class="seal">BaZi</div>
+  <div class="main">BaZi is <span class="gold">NOT</span><br>fortune-telling</div>
+</div>
+<div class="card" id="c2">
+  <div class="seal">BaZi</div>
+  <div class="big-gold" style="font-size:120px">1,000 years</div>
+  <div class="sub">a pattern-recognition system</div>
+</div>
+<div class="card" id="c3">
+  <div class="seal">BaZi</div>
+  <div class="main">your<br><span class="gold">factory settings</span><br>manual</div>
+</div>
+<div class="card" id="c4">
+  <div class="seal">BaZi</div>
+  <div class="main" style="color:#9aa3ad">describes defaults,</div>
+  <div class="main" style="margin-top:60px"><span class="gold">not destiny</span></div>
+</div>
+<div class="card" id="c5">
+  <div class="seal">BaZi</div>
+  <div class="cta">Follow</div>
+  <div class="sub">the 5 elements, in plain English</div>
+</div>
+<script>
+  const n = new URLSearchParams(location.search).get('card') || '1';
+  document.getElementById('c' + n).style.display = 'flex';
+</script>
+</body>
+</html>
