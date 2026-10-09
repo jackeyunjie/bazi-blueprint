@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  html,body{margin:0;width:1080px;height:1920px;overflow:hidden}
+  body{background:#101418;font-family:Georgia,'Times New Roman',serif;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 90px;box-sizing:border-box}
+  .seal{border:3px solid #c9a227;color:#c9a227;padding:14px 34px;font-size:30px;letter-spacing:.5em;text-transform:uppercase;border-radius:4px;margin-bottom:70px}
+  .main{color:#f4efe6;font-size:88px;line-height:1.25;font-weight:600}
+  .gold{color:#e3c15c}
+  .sub{color:#9aa3ad;font-size:52px;line-height:1.4;margin-top:60px}
+  .big-gold{color:#e3c15c;font-size:150px;font-weight:700;margin:20px 0}
+  .vs{color:#5a636e;font-size:64px;margin:30px 0}
+  .cta{background:#c9a227;color:#141414;font-size:72px;font-weight:700;padding:40px 70px;border-radius:16px;margin-top:60px}
+  .card{display:none;flex-direction:column;align-items:center;justify-content:center;width:100%}
+  .pillars{display:flex;gap:36px;margin:50px 0}
+  .pillar{border:3px solid rgba(201,162,39,.5);border-radius:12px;padding:44px 30px;color:#f4efe6;font-size:44px;letter-spacing:.1em}
+</style>
+</head>
+<body>
+<div class="card" id="c1">
+  <div class="seal">BaZi</div>
+  <div class="main">Western astrology<br>uses your birth <span class="gold">MONTH</span>.</div>
+  <div class="main" style="margin-top:80px">Chinese astrology<br>uses your birth <span class="gold">HOUR</span>.</div>
+</div>
+<div class="card" id="c2">
+  <div class="main" style="font-size:72px;color:#9aa3ad">zodiac signs</div>
+  <div class="big-gold">12</div>
+  <div class="vs">VS</div>
+  <div class="main" style="font-size:72px;color:#9aa3ad">BaZi chart types</div>
+  <div class="big-gold">5,000+</div>
+</div>
+<div class="card" id="c3">
+  <div class="seal">Four Pillars</div>
+  <div class="pillars">
+    <div class="pillar">YEAR</div>
+    <div class="pillar">MONTH</div>
+  </div>
+  <div class="pillars" style="margin-top:0">
+    <div class="pillar">DAY</div>
+    <div class="pillar">HOUR</div>
+  </div>
+  <div class="sub">four layers of your birth moment</div>
+</div>
+<div class="card" id="c4">
+  <div class="seal">BaZi</div>
+  <div class="main">Your chart is<br>as specific as<br><span class="gold">your fingerprints</span>.</div>
+</div>
+<div class="card" id="c5">
+  <div class="seal">BaZi</div>
+  <div class="main">Born the same week.</div>
+  <div class="main" style="margin-top:70px"><span class="gold">Opposite lives.</span></div>
+  <div class="sub">the hour changes everything</div>
+</div>
+<div class="card" id="c6">
+  <div class="seal">BaZi</div>
+  <div class="main">What's your<br><span class="gold">Day Master</span> element?</div>
+  <div class="cta">Comment "BLUEPRINT"</div>
+  <div class="sub">or tap the link in bio</div>
+</div>
+<script>
+  const n = new URLSearchParams(location.search).get('card') || '1';
+  document.getElementById('c' + n).style.display = 'flex';
+</script>
+</body>
+</html>
